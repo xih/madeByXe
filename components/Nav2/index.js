@@ -21,7 +21,7 @@ const Nav2 = () => (
         <img src={'/static/Xe.svg'} />
       </a>
     </Link>
-    <Link href='/'>
+    <Link href='www.twitter.com'>
       <a>
         <img src={'/static/twitter.png'} />
       </a>
