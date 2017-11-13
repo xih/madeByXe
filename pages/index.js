@@ -6,6 +6,9 @@ import Post from 'components/Post'
 
 const IndexPage = ({ posts }) =>
   <Layout>
+    <div>
+      <img src={'/static/Hi.svg'} />
+    </div>
     <ul>
       {posts.map(p => <Post key={p.title} post={p} />)}
     </ul>
