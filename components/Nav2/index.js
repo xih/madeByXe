@@ -3,10 +3,14 @@ import styled from 'styled-components'
 
 const Wrapper = styled.nav`
   background-image: url('/static/goyard.jpg');
-  height: 145px;
+  @media (max-width: 500px) {
+    height: 50px;
+  }
+  height: 135px;
   border-bottom: 1px solid #ddd;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 
   a {
     margin: 0 10px;
@@ -15,24 +19,49 @@ const Wrapper = styled.nav`
   }
 `
 
+const Brand = styled.div`
+  font-family: didoni-urw, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4.7em;
+  color: white;
+
+  @media (max-width: 500px) {
+    font-size: 2em;
+  }
+`
+
+const Social = styled.div`
+  a {
+    margin-right: -0.2em;
+  }
+`
+const Fill = styled.div`
+  flex: 0.26;
+`
+
 const Nav2 = () => (
   <Wrapper>
     <Link href='/'>
-      <a>
-        Xe
-      </a>
+      <Brand>
+        <a>
+          Xe
+        </a>
+      </Brand>
     </Link>
-    <Link href='www.twitter.com'>
-      <a>
-        <img src={'/static/twitter.png'} />
-      </a>
-    </Link>
-    <Link href='/'>
-      <a>
-        <img src={'/static/instagram.png'} />
-      </a>
-    </Link>
-
+    <Fill />
+    <Social>
+      <Link href='https://www.twitter.com'>
+        <a>
+          <img src={'/static/twitter.png'} />
+        </a>
+      </Link>
+      <Link href='/'>
+        <a>
+          <img src={'/static/instagram.png'} />
+        </a>
+      </Link>
+    </Social>
   </Wrapper>
 )
 
