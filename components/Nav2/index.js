@@ -2,8 +2,8 @@ import Link from 'next/link'
 import styled from 'styled-components'
 
 const Wrapper = styled.nav`
-  background-image: url('/static/picassoNavBar2.png');
-  height: 48px;
+  background-image: url('/static/goyard.jpg');
+  height: 145px;
   border-bottom: 1px solid #ddd;
   display: flex;
   align-items: center;
@@ -11,6 +11,7 @@ const Wrapper = styled.nav`
   a {
     margin: 0 10px;
     color: #FFF;
+    text-decoration: none;
   }
 `
 
@@ -18,7 +19,7 @@ const Nav2 = () => (
   <Wrapper>
     <Link href='/'>
       <a>
-        <img src={'/static/Xe.svg'} />
+        Xe
       </a>
     </Link>
     <Link href='www.twitter.com'>
