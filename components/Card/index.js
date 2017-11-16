@@ -10,6 +10,11 @@ const CardContainer = styled.div`
     margin-top: 2em;
     width: 100%;
   }
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  transition: all .4s cubic-bezier(.77,0,.175,1);
+  :hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,.2);
+  }
 
 `
 

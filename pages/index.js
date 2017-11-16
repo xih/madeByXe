@@ -7,9 +7,9 @@ import Card from 'components/Card'
 // import Post from 'components/Post'
 
 const Div = styled.div`
-  font-family: didoni-urw, serif;
+  font-family: ministry, sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100;
   font-size: 3em;
   @media (max-width: 500px) {
     font-size: 1.5em;
@@ -32,6 +32,7 @@ const ParagraphDiv = styled.div`
   font-family: brandon-grotesque, sans-serif;
   font-style: normal;
   font-weight: 100;
+  font-size: 1.6em;
 `
 
 const IndexPage = ({ posts }) =>

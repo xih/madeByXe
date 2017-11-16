@@ -20,9 +20,9 @@ const Wrapper = styled.nav`
 `
 
 const Brand = styled.div`
-  font-family: didoni-urw, serif;
+  font-family: freight-neo-pro, sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 4.7em;
   color: white;
 
