@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Wrapper from './Wrapper'
-import Footer from 'components/Footer'
+// import Footer from 'components/Footer'
 
 import Nav2 from 'components/Nav2'
 
@@ -17,8 +17,8 @@ export default ({ children, title = 'This is the default title' }) => (
       { children }
     </main>
 
-    <Footer>
-      Footer
-    </Footer>
+    {/* <Footer> */}
+    {/* Footer */}
+    {/* </Footer> */}
   </Wrapper>
 )
