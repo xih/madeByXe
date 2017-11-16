@@ -8,21 +8,16 @@ const Wrapper = styled.nav`
   }
   height: 135px;
   border-bottom: 1px solid #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
   a {
-    margin: 0 10px;
     color: #FFF;
     text-decoration: none;
   }
 `
 
 const Brand = styled.div`
-  font-family: freight-neo-pro, sans-serif;
+  font-family: ministry, sans-serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 4.7em;
   color: white;
 
@@ -33,35 +28,45 @@ const Brand = styled.div`
 
 const Social = styled.div`
   a {
-    margin-right: -0.2em;
+    margin-left: 0.45em;
+  }
+  img {
+    @media (max-width: 500px) {
+      width: 1.4em;
+    }
   }
 `
-const Fill = styled.div`
-  flex: 0.26;
+
+const NavContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 `
 
 const Nav2 = () => (
   <Wrapper>
-    <Link href='/'>
-      <Brand>
-        <a>
-          Xe
-        </a>
-      </Brand>
-    </Link>
-    <Fill />
-    <Social>
-      <Link href='https://www.twitter.com'>
-        <a>
-          <img src={'/static/twitter.png'} />
-        </a>
-      </Link>
+    <NavContainer className='container'>
       <Link href='/'>
-        <a>
-          <img src={'/static/instagram.png'} />
-        </a>
+        <Brand>
+          <a>
+            Xe
+          </a>
+        </Brand>
       </Link>
-    </Social>
+      <Social>
+        <Link href='https://www.twitter.com'>
+          <a target='_blank'>
+            <img src={'/static/Twitter.svg'} />
+          </a>
+        </Link>
+        <Link href='https://www.instagram.com'>
+          <a target='_blank'>
+            <img src={'/static/Instagram.svg'} />
+          </a>
+        </Link>
+      </Social>
+    </NavContainer>
   </Wrapper>
 )
 
