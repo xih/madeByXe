@@ -4,8 +4,6 @@ import { getPosts } from 'api/posts'
 import styled from 'styled-components'
 import Card from 'components/Card'
 
-// import Post from 'components/Post'
-
 const Div = styled.div`
   font-family: ministry, sans-serif;
   font-style: normal;
@@ -47,18 +45,15 @@ const IndexPage = ({ posts }) =>
       Portfolio
     </Div>
     <CardsContainer className='container card-deck'>
-      <Card url={'/static/streetstyle.jpg'} />
-      <Card url={'/static/5v2.jpg'} />
-      <Card url={'/static/forwalkingv2.jpg'} height='424px' />
+      <Card url={'/static/streetstyle.jpg'} title={'Streetstyle Photography x iOS'} slug={'streetstyle-ios'} />
+      <Card url={'/static/5v2.jpg'} title={'Designed and Sewed By Me'} slug={'designed-and-sewed-by-me'} />
+      <Card url={'/static/forwalkingv2.jpg'} height='424px' title={'Future Clothing Designs'} slug={'future-clothing-designs'} />
     </CardsContainer>
     <CardsContainer className='container card-deck'>
-      <Card url={'/static/vatican.jpg'} />
-      <Card url={'/static/interiorDesignChair.jpg'} height='232px' />
-      <Card url={'/static/KEBAB.jpg'} />
+      <Card url={'/static/vatican.jpg'} title={'Europe'} slug={'europe'} />
+      <Card url={'/static/interiorDesignChair.jpg'} height='232px' title={'Sketches of Designer Chairs'} slug={'sketches-designer-chairs'} />
+      <Card url={'/static/KEBAB.jpg'} title={'Quest to Find the Best Valued Kebabtallrik in Lund'} slug={'kebabtallrik-lund'} />
     </CardsContainer>
-    {/* <ul>
-      {posts.map(p => <Post key={p.title} post={p} />)}
-    </ul> */}
   </Layout>
 
 IndexPage.getInitialProps = async ({ req }) => {

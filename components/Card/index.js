@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from 'next/link'
 
 const CardContainer = styled.div`
   width: 20rem;
@@ -14,8 +15,8 @@ const CardContainer = styled.div`
   transition: all .4s cubic-bezier(.77,0,.175,1);
   :hover {
     box-shadow: 0 20px 40px rgba(0,0,0,.2);
+    cursor: pointer;
   }
-
 `
 
 const Img = styled.img`
@@ -26,14 +27,17 @@ const Img = styled.img`
 `
 
 const Card = (props) => (
-  <CardContainer className='card'>
-    <Img className='card-img-top' src={props.url} alt='Card image cap' height={props.height} />
-    <div className='card-block'>
-      <h4 className='card-title'>Card title</h4>
-      <p className='card-text'>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p className='card-text'><small class='text-muted'>Last updated 3 mins ago</small></p>
-    </div>
-  </CardContainer>
+  // <Link href='/'><a>Home</a></Link>
+  <Link href={props.slug}>
+    <CardContainer className='card'>
+      <Img className='card-img-top' src={props.url} alt='Card image cap' height={props.height} />
+      <div className='card-block'>
+        <h4 className='card-title'>{props.title}</h4>
+        <p className='card-text'>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p className='card-text'><small class='text-muted' /></p>
+      </div>
+    </CardContainer>
+  </Link>
 )
 
 export default Card
