@@ -4,11 +4,14 @@ import Layout from 'layouts/Main'
 import Europe from '/posts/Europe'
 import QuestKebabtallrik from '/posts/QuestKebabtallrik'
 
+import { getPortfolio } from 'api/contentful'
+
 const portfolioEntryPage = (props) => {
   if (props.url.query.portfolioEntry === 'europe') {
+    const images = props.entries.includes.Asset.map((el) => 'https:' + el.fields.file.url)
     return (
       <Layout>
-        <Europe />
+        <Europe images={images} />
       </Layout>
     )
   } else if (props.url.query.portfolioEntry === 'kebabtallrik-lund') {
@@ -18,6 +21,12 @@ const portfolioEntryPage = (props) => {
       </Layout>
     )
   }
+}
+
+portfolioEntryPage.getInitialProps = async ({ req, query }) => {
+  const portfolio = await getPortfolio(query.portfolioEntry)
+  const json1 = await portfolio.json()
+  return { entries: json1 }
 }
 
 export default portfolioEntryPage
