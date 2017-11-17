@@ -1,8 +1,7 @@
 const nextRoutes = require('next-routes')
 const routes = module.exports = nextRoutes()
 
+routes.add('/:portfolioEntry', 'portfolioEntry')
 routes.add('index', '/')
 routes.add('about', '/about')
 routes.add('post', '/blog/:slug')
-
-routes.add('/:portfolioEntry', 'portfolioEntry')

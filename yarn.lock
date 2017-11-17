@@ -1716,6 +1716,12 @@ diffie-hellman@^5.0.0:
     miller-rabin "^4.0.0"
     randombytes "^2.0.0"
 
+dir-to-json@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/dir-to-json/-/dir-to-json-0.0.3.tgz#54a8e81a570eb129fe4c3d80f7012f4d357fe731"
+  dependencies:
+    q "^1.0.1"
+
 doctrine@1.5.0, doctrine@^1.2.2:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-1.5.0.tgz#379dce730f6166f76cefa4e6707a159b02c5a6fa"
@@ -4277,7 +4283,7 @@ punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
-q@^1.4.1:
+q@^1.0.1, q@^1.4.1:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.0.tgz#dd01bac9d06d30e6f219aecb8253ee9ebdc308f1"
 
