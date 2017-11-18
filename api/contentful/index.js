@@ -1,14 +1,25 @@
 import fetch from 'isomorphic-fetch'
+import queryString from 'query-string'
 
 export function getPortfolio (slug) {
-  return fetch('https://cdn.contentful.com/spaces/3efe131fxlk7/entries', { method: 'get',
+  const params = {
+    'fields.slug': slug,
+    'content_type': 'portfolioEntry'
+    // 'sys.id': '1XX8rMrJnCG4ACqksEucSq',
+  }
+
+  return fetch(`https://cdn.contentful.com/spaces/3efe131fxlk7/entries?${queryString.stringify(params)}`, { method: 'get',
     headers: {
-    //  'Authorization': 'Basic '+btoa('username:password'),
-      'Authorization': 'Bearer ' + '71eebb48b1297ddd40debfd61cd1b1f777bb91f61381220157ff4cdfe374c42c',
-    // 'Content-Type': 'application/x-www-form-urlencoded'
-      'content_type': 'portfolioEntry',
-      'slug': slug,
-      'include': 2
+      'Authorization': 'Bearer ' + '71eebb48b1297ddd40debfd61cd1b1f777bb91f61381220157ff4cdfe374c42c'
     }
   })
 }
+
+// This works but it doesn't get the correct images
+// export function getPortfolio (slug) {
+//   return fetch('https://cdn.contentful.com/spaces/3efe131fxlk7/entries', { method: 'get',
+//     headers: {
+//       'Authorization': 'Bearer ' + '71eebb48b1297ddd40debfd61cd1b1f777bb91f61381220157ff4cdfe374c42c',
+//     }
+//   })
+// }
