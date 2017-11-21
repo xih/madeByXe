@@ -20,7 +20,6 @@ const Brand = styled.div`
   font-weight: 100;
   font-size: 4.7em;
   color: white;
-
   @media (max-width: 500px) {
     font-size: 2em;
   }
@@ -44,14 +43,21 @@ const NavContainer = styled.div`
   justify-content: space-between;
 `
 
+const A = styled.a`
+  :hover {
+    cursor: pointer;
+  }
+  margin-top: 0;
+`
+
 const Nav2 = () => (
   <Wrapper>
     <NavContainer className='container'>
       <Link href='/'>
         <Brand>
-          <a>
+          <A>
             Xe
-          </a>
+          </A>
         </Brand>
       </Link>
       <Social>

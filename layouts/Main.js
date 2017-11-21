@@ -4,7 +4,7 @@ import Wrapper from './Wrapper'
 
 import Nav2 from 'components/Nav2'
 
-export default ({ children, title = 'This is the default title' }) => (
+export default ({ children, title = 'Hi! I\'m Xe' }) => (
   <Wrapper>
     <Head>
       <title>{ title }</title>

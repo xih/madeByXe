@@ -16,6 +16,12 @@ export default class SiteDocument extends Document {
           <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/sanitize.css/2.0.0/sanitize.min.css' />
           <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.7.4/tachyons.min.css' />
           <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css' />
+          <link rel='apple-touch-icon' sizes='180x180' href='/static/favicon/apple-touch-icon.png' />
+          <link rel='icon' type='image/png' sizes='32x32' href='/static/favicon/favicon-32x32.png' />
+          <link rel='icon' type='image/png' sizes='16x16' href='/static/favicon/favicon-16x16.png' />
+          <link rel='manifest' href='/static/favicon/manifest.json' />
+          <link rel='mask-icon' href='/static/favicon/safari-pinned-tab.svg' color='#5bbad5' />
+          <meta name='theme-color' content='#ffffff' />
           <Typekit kitId='ust7dkr' />
           {styleTags}
         </Head>

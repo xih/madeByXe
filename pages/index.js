@@ -63,7 +63,7 @@ const IndexPage = ({ posts }) =>
       Hi! I'm Xe (pronounced Z)
     </Div>
     <ParagraphDiv className='container'>
-      I’m a self taught designer who loves clothes and interiors. Previously I studied Engineering at UC Berkeley.
+      I’m a self-taught designer who loves clothes and interiors. Previously I studied Engineering at UC Berkeley.
     </ParagraphDiv>
     <Div className='container'>
       Portfolio
