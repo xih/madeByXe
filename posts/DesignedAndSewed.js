@@ -31,8 +31,6 @@ const DesignedAndSewed = (props) => {
       <Img src={src} />
     </div>
   )
-
-  console.log(props)
   return (
     <Div className='container'>
       <H1>{props.title}</H1>

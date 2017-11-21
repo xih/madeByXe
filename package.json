@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "node server.js",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "NODE_PATH=. NODE_ENV=production node server.js",
     "lint": "standard 'api/*' 'components/*' 'layouts/*' 'pages/*' 'styles/*' 'routes.js' 'server.js'",
     "precommit": "lint-staged"
@@ -17,7 +17,7 @@
     "express": "^4.16.2",
     "husky": "^0.14.3",
     "lint-staged": "^4.2.3",
-    "next": "^4.0.3",
+    "next": "^4.1.4",
     "next-routes": "^1.1.0",
     "query-string": "^5.0.1",
     "react": "^16.0.0",

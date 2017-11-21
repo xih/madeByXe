@@ -28,7 +28,7 @@ const Img = styled.img`
 
 const Card = (props) => (
   // <Link href='/'><a>Home</a></Link>
-  <Link href={'/' + props.slug}>
+  <Link prefetch href={'/' + props.slug}>
     <CardContainer className='card'>
       <Img className='card-img-top' src={props.url} alt='Card image cap' height={props.height} />
       <div className='card-block'>

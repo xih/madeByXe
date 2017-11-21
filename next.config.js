@@ -13,5 +13,16 @@ module.exports = {
 
     // Important: return the modified config
     return config
+  },
+  exportPathMap: function() {
+    return {
+      '/': { page: '/' },
+      '/europe': { page: '/portfolioEntry', query: { portfolioEntry: 'europe' } },
+      '/kebabtallrik-lund': { page: '/portfolioEntry', query: { portfolioEntry: 'kebabtallrik-lund' } },
+      '/streetstyle-ios': { page: '/portfolioEntry', query: { portfolioEntry: 'streetstyle-ios' } },
+      '/designed-and-sewed-by-me': { page: '/portfolioEntry', query: { portfolioEntry: 'designed-and-sewed-by-me' } },
+      '/future-clothing-designs': { page: '/portfolioEntry', query: { portfolioEntry: 'future-clothing-designs' } },
+      '/sketches-designer-chairs': { page: '/portfolioEntry', query: { portfolioEntry: 'sketches-designer-chairs' } },
+    }
   }
 }
