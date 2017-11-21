@@ -28,12 +28,12 @@ const Img = styled.img`
 
 const Card = (props) => (
   // <Link href='/'><a>Home</a></Link>
-  <Link href={props.slug}>
+  <Link href={'/' + props.slug}>
     <CardContainer className='card'>
       <Img className='card-img-top' src={props.url} alt='Card image cap' height={props.height} />
       <div className='card-block'>
         <h4 className='card-title'>{props.title}</h4>
-        <p className='card-text'>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p className='card-text'>{props.cardText}</p>
         <p className='card-text'><small class='text-muted' /></p>
       </div>
     </CardContainer>

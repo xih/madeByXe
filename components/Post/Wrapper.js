@@ -10,7 +10,6 @@ const Wrapper = styled.div`
 
     &:hover {
       background: #F5F5F5;
-
       h3 { color: #387EF5 }
     }
   }
@@ -20,7 +19,7 @@ const Wrapper = styled.div`
     font-weight: bold;
     font-size: 1.75rem;
     line-height: 35px;
-    font-family: "PT Sans", sans-serif;
+    ${''}
     text-transform: capitalize;
     margin: 0;
   }
@@ -29,7 +28,7 @@ const Wrapper = styled.div`
     font-size: 1.2rem;
     line-height: 35px;
     color: #444;
-    font-family: "PT Serif", sans-serif;
+    ${''}
     margin: 0;
   }
 `

@@ -45,14 +45,14 @@ const IndexPage = ({ posts }) =>
       Portfolio
     </Div>
     <CardsContainer className='container card-deck'>
-      <Card url={'/static/streetstyle.jpg'} title={'Streetstyle Photography x iOS'} slug={'streetstyle-ios'} />
-      <Card url={'/static/5v2.jpg'} title={'Designed and Sewed By Me'} slug={'designed-and-sewed-by-me'} />
-      <Card url={'/static/forwalkingv2.jpg'} height='424px' title={'Future Clothing Designs'} slug={'future-clothing-designs'} />
+      <Card url={'/static/streetstyle.jpg'} title={'Streetstyle Photography x iOS'} slug={'streetstyle-ios'} cardText={'hi'} />
+      <Card url={'/static/5v2.jpg'} title={'Designed and Sewed By Me'} slug={'designed-and-sewed-by-me'} cardText={'hello'} />
+      <Card url={'/static/forwalkingv2.jpg'} height='424px' title={'Future Clothing Designs'} slug={'future-clothing-designs'} cardText={''} />
     </CardsContainer>
     <CardsContainer className='container card-deck'>
-      <Card url={'/static/vatican.jpg'} title={'Europe'} slug={'europe'} />
-      <Card url={'/static/interiorDesignChair.jpg'} height='232px' title={'Sketches of Designer Chairs'} slug={'sketches-designer-chairs'} />
-      <Card url={'/static/KEBAB.jpg'} title={'Quest to Find the Best Valued Kebabtallrik in Lund'} slug={'kebabtallrik-lund'} />
+      <Card url={'/static/vatican.jpg'} title={'Europe'} slug={'europe'} cardText={''} />
+      <Card url={'/static/interiorDesignChair.jpg'} height='232px' title={'Sketches of Designer Chairs'} slug={'sketches-designer-chairs'} cardText={''} />
+      <Card url={'/static/KEBAB.jpg'} title={'Quest to Find the Best Valued Kebabtallrik in Lund'} slug={'kebabtallrik-lund'} cardText={''} />
     </CardsContainer>
   </Layout>
 

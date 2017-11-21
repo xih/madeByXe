@@ -24,7 +24,6 @@ const H1 = styled.h1`
   font-size: 6.7vw;
   line-height: 7vw;
   text-align: center;
-  font-weight: 400;
   font-family: brandon-grotesque, sans-serif;
   font-style: normal;
   font-weight: 900;
