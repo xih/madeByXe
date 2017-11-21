@@ -19,11 +19,14 @@ const portfolioEntryPage = (props) => {
       </Layout>
     )
   } else if (props.url.query.portfolioEntry === 'kebabtallrik-lund') {
-    const images = props.entries.includes.Asset.map((el) => 'https:' + el.fields.file.url)
-    console.log(props)
+    // const images = props.entries.includes.Asset.map((el) => 'https:' + el.fields.file.url)
+    const content = props.entries.items[0].fields.content
+    const title = props.entries.items[0].fields.title
+    const mainPhoto = props.entries.items[0].fields.mainPhoto.mainPhoto
+
     return (
       <Layout>
-        <QuestKebabtallrik images={images} />
+        <QuestKebabtallrik content={content} title={title} mainPhoto={mainPhoto} />
       </Layout>
     )
   } else if (props.url.query.portfolioEntry === 'streetstyle-ios') {
