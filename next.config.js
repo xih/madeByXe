@@ -17,12 +17,13 @@ module.exports = {
   exportPathMap: function() {
     return {
       '/': { page: '/' },
-      '/europe': { page: '/portfolioEntry', query: { portfolioEntry: 'europe' } },
-      '/kebabtallrik-lund': { page: '/portfolioEntry', query: { portfolioEntry: 'kebabtallrik-lund' } },
-      '/streetstyle-ios': { page: '/portfolioEntry', query: { portfolioEntry: 'streetstyle-ios' } },
-      '/designed-and-sewed-by-me': { page: '/portfolioEntry', query: { portfolioEntry: 'designed-and-sewed-by-me' } },
-      '/future-clothing-designs': { page: '/portfolioEntry', query: { portfolioEntry: 'future-clothing-designs' } },
-      '/sketches-designer-chairs': { page: '/portfolioEntry', query: { portfolioEntry: 'sketches-designer-chairs' } },
+      '/about': { page: '/about' },
+      '/portfolioEntry/europe': { page: '/portfolioEntry', query: { portfolioEntry: 'europe' } },
+      '/portfolioEntry/kebabtallrik-lund': { page: '/portfolioEntry', query: { portfolioEntry: 'kebabtallrik-lund' } },
+      '/portfolioEntry/streetstyle-ios': { page: '/portfolioEntry', query: { portfolioEntry: 'streetstyle-ios' } },
+      '/portfolioEntry/designed-and-sewed-by-me': { page: '/portfolioEntry', query: { portfolioEntry: 'designed-and-sewed-by-me' } },
+      '/portfolioEntry/future-clothing-designs': { page: '/portfolioEntry', query: { portfolioEntry: 'future-clothing-designs' } },
+      '/portfolioEntry/sketches-designer-chairs': { page: '/portfolioEntry', query: { portfolioEntry: 'sketches-designer-chairs' } },
     }
   }
 }

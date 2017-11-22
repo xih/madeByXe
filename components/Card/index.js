@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import Link from 'next/link'
+// import Link from 'next/link'
+import { Link } from 'routes'
 
 const CardContainer = styled.div`
   width: 20rem;
@@ -27,7 +28,7 @@ const Img = styled.img`
 `
 
 const Card = (props) => (
-  <Link href={props.slug}>
+  <Link href={{ pathname: '/portfolioEntry', query: { portfolioEntry: props.slug } }} as={`/portfolioEntry/${props.slug}`}>
     <CardContainer className='card'>
       <a>
         <Img className='card-img-top' src={props.url} alt='Card image cap' height={props.height} />
