@@ -30,13 +30,16 @@ const Card = (props) => (
   // <Link href={{ pathname: '/', query: { portfolioEntry: props.slug } }} >
   <Link route={props.slug} as={`/${props.slug}`}>
     <CardContainer className='card'>
-      <Img className='card-img-top' src={props.url} alt='Card image cap' height={props.height} />
-      <div className='card-block'>
-        <h4 className='card-title'>{props.title}</h4>
-        <p className='card-text'>{props.cardText}</p>
-        <p className='card-text'><small class='text-muted' /></p>
-      </div>
+      <a>
+        <Img className='card-img-top' src={props.url} alt='Card image cap' height={props.height} />
+        <div className='card-block'>
+          <h4 className='card-title'>{props.title}</h4>
+          <p className='card-text'>{props.cardText}</p>
+          <p className='card-text'><small class='text-muted' /></p>
+        </div>
+      </a>
     </CardContainer>
+
   </Link>
 )
 
