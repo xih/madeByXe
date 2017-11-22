@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+- 7
+cache:
+  yarn: true
+  directories:
+  - node_modules
+script:
+- yarn run build
+deploy:
+  provider: gcs
+  access_key_id: GOOGCFYUO34UIYOAZAI3
+  secret_access_key:
+    secure: z3inW9+NNmJmImOvPZlVe7Z4OJZpc2dax0/Nv5hlAJGCbIvGdzOIVj3kJ6J0e4SdHKCUK34YcJpAmrudDH6qvIOqr1THWkIEYlBDZWbGOODD2HAWnhNxeBjPRN9q90Cqov3N/NNd7IP4Rj02Hd6jgv5UWMQs1I6V8b13VTRMoK/E0ZzTWhhbAwBaqymxY0vYBiblaepa6srs0/jK3w10gvmIDtWM4T3RdNm/+ssNj9QcXW6vma4iF+0+XHaZhbOZKAzeqp/3wTJIDxowrHyUcQrI0I01/20kSXKUgWGMNhbNP88yG0RH9TCtz4ev/pwzKIO8pKY/QN3KO+JK4XI7MPCnlVnoVmWjwUlkvUGElzWItiG/5cixNPjVoYR4z8z89UR4usBpcrDDSc2LNT/FT785e9bLr6MTRqZbcPSEOSWoLqL3vrWdQev5lbhcCFoQzdQo10fJb3zTkLfsKylH3T7BgjUuhditD9NhfbEJRIEb8nJ7btG17C/TDuE29CCZvJgkb1McvhRIztkzZUkszCD51ot9FKCa+RgUEqeVlk0rb3GhifiXipHneGaVSY7k7Bbn8bKX2FuRb8UwGHZtgeihQ9WE4HnFOOk4m3h+AmAXNeu2Hc6CYrEuH3XPlZy5FpBUdb7CPb9yo1bMjBstbwJCFF35Kbwft28aNYpQNJQ=
+  bucket: www.madebyxe.com
+  local-dir: out
+  skip_cleanup: true
+  acl: public-read
+  cache_control: "no-cache"
+  on:
+    branch: master
+    repo: xih/madeByXe
