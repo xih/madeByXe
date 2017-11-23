@@ -30,9 +30,12 @@ const portfolioEntryPage = (props) => {
       </Layout>
     )
   } else if (props.url.query.portfolioEntry === 'streetstyle-ios') {
+    const images = props.entries.includes.Asset.map((el) => 'https:' + el.fields.file.url)
+    const title = props.entries.items[0].fields.title
+    const introduction = props.entries.items[0].fields.introduction
     return (
       <Layout>
-        <StreetstyleIos />
+        <StreetstyleIos title={title} images={images} intro={introduction} />
       </Layout>
     )
   } else if (props.url.query.portfolioEntry === 'designed-and-sewed-by-me') {
