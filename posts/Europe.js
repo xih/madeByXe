@@ -16,16 +16,12 @@ const Img = styled.img`
 `
 
 const EuropeContainer = styled.div`
-  ${''}
-  ${''}
-  ${''}
-  ${''}
   background-color: black;
+  margin-bottom: 5em;
 `
-//
+
 const MasonryContainer = styled.div`
   margin: 0 auto;
-
 `
 
 const IntroContainer = styled.div`

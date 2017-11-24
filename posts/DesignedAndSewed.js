@@ -23,6 +23,7 @@ const Div = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 2em;
+  margin-bottom: 5em;
 `
 
 const P = styled.p`
