@@ -25,6 +25,14 @@ const Div = styled.div`
   margin-top: 2em;
 `
 
+const P = styled.p`
+  white-space: pre-wrap;
+  max-width: 40em;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+`
+
 const DesignedAndSewed = (props) => {
   const images = props.images.map(src =>
     <div>
@@ -34,6 +42,7 @@ const DesignedAndSewed = (props) => {
   return (
     <Div className='container'>
       <H1>{props.title}</H1>
+      <P>{props.intro}</P>
       {images}
     </Div>
   )

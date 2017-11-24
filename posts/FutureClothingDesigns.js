@@ -3,7 +3,6 @@
 const FutureClothingDesigns = (props) => {
   return (
     <div className='container'>
-      {/* <img src={'/static/KEBAB.jpg'} /> */}
       future
     </div>
   )

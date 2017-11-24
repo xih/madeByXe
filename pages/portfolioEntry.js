@@ -41,9 +41,10 @@ const portfolioEntryPage = (props) => {
   } else if (props.url.query.portfolioEntry === 'designed-and-sewed-by-me') {
     const images = props.entries.includes.Asset.map((el) => 'https:' + el.fields.file.url)
     const title = props.entries.items[0].fields.title
+    const introduction = props.entries.items[0].fields.introduction
     return (
       <Layout>
-        <DesignedAndSewed title={title} images={images} />
+        <DesignedAndSewed title={title} images={images} intro={introduction} />
       </Layout>
     )
   } else if (props.url.query.portfolioEntry === 'future-clothing-designs') {
