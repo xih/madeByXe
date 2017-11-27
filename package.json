@@ -22,6 +22,7 @@
     "query-string": "^5.0.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-ga": "^2.3.5",
     "react-masonry-component": "^6.0.1",
     "react-typekit": "^1.1.0",
     "standard": "^10.0.3",

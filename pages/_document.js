@@ -2,12 +2,17 @@ import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import 'styles/global-styles'
 import Typekit from 'react-typekit'
+import ReactGA from 'react-ga'
 
 export default class SiteDocument extends Document {
   render () {
     const sheet = new ServerStyleSheet()
     const main = sheet.collectStyles(<Main />)
     const styleTags = sheet.getStyleElement()
+    // Trying to add google analytics
+    ReactGA.initialize('UA-110243214-1')
+    ReactGA.pageview(window.location.pathname + window.location.search)
+
     return (
       <html>
         <Head>
