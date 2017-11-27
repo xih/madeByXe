@@ -30,6 +30,8 @@ const H1 = styled.h1`
   letter-spacing: 0px;
   margin: 0;
   padding: 0;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
 `
 
 const Div = styled.div`
@@ -55,6 +57,7 @@ const Div = styled.div`
     font-family: brandon-grotesque, sans-serif;
     font-style: normal;
     font-weight: 700;
+    margin-top: 0.3em;
   }
 
   h2 {
