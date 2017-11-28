@@ -61,12 +61,12 @@ const Nav2 = () => (
         </Brand>
       </Link>
       <Social>
-        <Link href='https://www.twitter.com'>
+        <Link href='https://www.twitter.com/madebyxe'>
           <a target='_blank'>
             <img src={'/static/Twitter.svg'} />
           </a>
         </Link>
-        <Link href='https://www.instagram.com'>
+        <Link href='https://www.instagram.com/madebyxe'>
           <a target='_blank'>
             <img src={'/static/Instagram.svg'} />
           </a>
