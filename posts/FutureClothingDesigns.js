@@ -26,19 +26,22 @@ const P = styled.p`
   font-family: futura-pt, sans-serif;
   font-style: normal;
   font-weight: 300;
+  font-size: 1.1825em;
+  line-height: 1.625em;
+  margin: auto;
 `
 
 const Img = styled.img`
   height: auto;
-  max-width: 30em;
   margin-top: 2em;
+  @media (max-width: 1500px) {
+    width: 40em;
+  }
 `
 
 const FutureClothingDesigns = (props) => {
   const images = props.images.map(src =>
-    <div>
-      <Img src={src} />
-    </div>
+    <Img src={src} />
   )
 
   return (

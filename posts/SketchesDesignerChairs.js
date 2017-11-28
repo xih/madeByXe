@@ -26,6 +26,9 @@ const P = styled.p`
   font-family: futura-pt, sans-serif;
   font-style: normal;
   font-weight: 300;
+  font-size: 1.1825em;
+  line-height: 1.625em;
+  margin: auto;
 
   a {
       color: #e74c3c;

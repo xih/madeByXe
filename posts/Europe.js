@@ -65,7 +65,7 @@ const Europe = (props) => {
       <MasonryContainer className='hidden-md-up'>
         <MasonryInfiniteScroller sizes={sizes}>
           {props.images.map((src, index) =>
-            <div className='container-fluid'>
+            <div key={index} className='container-fluid'>
               <img src={src} />
             </div>
           )}

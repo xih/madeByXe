@@ -1,11 +1,5 @@
 import styled from 'styled-components'
 
-const Img = styled.img`
-  height: auto;
-  max-width: 30em;
-  margin-top: 2em;
-`
-
 const H1 = styled.h1`
   font-size: 6.7vw;
   line-height: 7vw;
@@ -32,13 +26,22 @@ const P = styled.p`
   font-family: futura-pt, sans-serif;
   font-style: normal;
   font-weight: 300;
+  font-size: 1.1825em;
+  line-height: 1.625em;
+  margin: auto;
+`
+
+const Img = styled.img`
+  height: auto;
+  margin-top: 2em;
+  @media (max-width: 1500px) {
+    width: 40em;
+  }
 `
 
 const DesignedAndSewed = (props) => {
   const images = props.images.map(src =>
-    <div>
-      <Img src={src} />
-    </div>
+    <Img src={src} />
   )
   return (
     <Div className='container'>

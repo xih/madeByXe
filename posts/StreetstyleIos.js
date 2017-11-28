@@ -1,11 +1,5 @@
 import styled from 'styled-components'
 
-const Img = styled.img`
-  height: auto;
-  max-width: 35em;
-  margin-top: 2em;
-`
-
 const Div = styled.div`
   display: flex;
   flex-direction: column;
@@ -32,17 +26,22 @@ const P = styled.p`
   font-family: futura-pt, sans-serif;
   font-style: normal;
   font-weight: 300;
+  font-size: 1.1825em;
+  line-height: 1.625em;
+  margin: auto;
 `
 
-const ImgDiv = styled.div`
-  max-width: 40em;
+const Img = styled.img`
+  height: auto;
+  margin-top: 2em;
+  @media (max-width: 1500px) {
+    width: 40em;
+  }
 `
 
 const StreetstyleIos = (props) => {
   const images = props.images.map(src =>
-    <ImgDiv>
-      <Img src={src} />
-    </ImgDiv>
+    <Img src={src} />
   )
   return (
     <Div className='container'>
