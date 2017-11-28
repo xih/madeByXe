@@ -39,7 +39,6 @@ const Card = (props) => (
         </div>
       </a>
     </CardContainer>
-
   </Link>
 )
 

@@ -75,7 +75,7 @@ const IndexPage = ({ posts }) =>
     </CardsContainer>
     <CardsContainer className='container card-deck'>
       <Card url={'/static/vatican.jpg'} title={'Europe'} slug={'europe'} cardText={europeCardText} />
-      <Card url={'/static/interiorDesignChair.jpg'} height='232px' title={'Sketches of Designer Chairs'} slug={'sketches-designer-chairs'} cardText={sketchesOfDesignerChairs} />
+      <Card url={'/static/magni.jpg'} height='232px' title={'Sketches of Designer Chairs'} slug={'sketches-designer-chairs'} cardText={sketchesOfDesignerChairs} />
       <Card url={'/static/KEBAB.jpg'} title={'Quest to Find the Best Valued Kebabtallrik in Lund'} slug={'kebabtallrik-lund'} cardText={questKebabtallrik} />
     </CardsContainer>
   </Layout>

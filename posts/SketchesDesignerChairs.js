@@ -37,15 +37,15 @@ const P = styled.p`
 
 const Img = styled.img`
   height: auto;
-  max-width: 35em;
   margin-top: 2em;
+  @media (max-width: 1500px) {
+    width: 40em;
+  }
 `
 
 const SketchesDesignerChairs = (props) => {
   const images = props.images.map(src =>
-    <div>
-      <Img src={src} />
-    </div>
+    <Img src={src} />
   )
 
   return (
