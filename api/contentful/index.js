@@ -14,12 +14,3 @@ export function getPortfolio (slug) {
     }
   })
 }
-
-// This works but it doesn't get the correct images
-// export function getPortfolio (slug) {
-//   return fetch('https://cdn.contentful.com/spaces/3efe131fxlk7/entries', { method: 'get',
-//     headers: {
-//       'Authorization': 'Bearer ' + '71eebb48b1297ddd40debfd61cd1b1f777bb91f61381220157ff4cdfe374c42c',
-//     }
-//   })
-// }

@@ -39,12 +39,18 @@ const portfolioEntryPage = (props) => {
       </Layout>
     )
   } else if (props.url.query.portfolioEntry === 'designed-and-sewed-by-me') {
-    const images = props.entries.includes.Asset.map((el) => 'https:' + el.fields.file.url)
+    const images2 = props.entries.includes.Asset.map((el) => ['https:' + el.fields.file.url, el.sys.id])
     const title = props.entries.items[0].fields.title
     const introduction = props.entries.items[0].fields.introduction
+    const correctOrderingIds = props.entries.items[0].fields.photos.map((el) => el.sys.id)
+    const correctIMAGES = []
+    for (var i = 0; i < correctOrderingIds.length; i++) {
+      var id = correctOrderingIds[i]
+      correctIMAGES.push(images2.find(el => el[1] === id)[0])
+    }
     return (
       <Layout>
-        <DesignedAndSewed title={title} images={images} intro={introduction} />
+        <DesignedAndSewed title={title} images={correctIMAGES} intro={introduction} />
       </Layout>
     )
   } else if (props.url.query.portfolioEntry === 'future-clothing-designs') {
@@ -57,9 +63,13 @@ const portfolioEntryPage = (props) => {
       </Layout>
     )
   } else if (props.url.query.portfolioEntry === 'sketches-designer-chairs') {
+    const images = props.entries.includes.Asset.map((el) => 'https:' + el.fields.file.url) || ['']
+    const title = props.entries.items[0].fields.title
+    const introduction = props.entries.items[0].fields.introduction
+
     return (
       <Layout>
-        <SketchesDesignerChairs />
+        <SketchesDesignerChairs title={title} images={images} intro={introduction} />
       </Layout>
     )
   }
