@@ -1,7 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import 'styles/global-styles'
-import Typekit from 'react-typekit'
 
 export default class SiteDocument extends Document {
   render () {
@@ -22,7 +21,7 @@ export default class SiteDocument extends Document {
           <link rel='manifest' href='/static/favicon/manifest.json' />
           <link rel='mask-icon' href='/static/favicon/safari-pinned-tab.svg' color='#5bbad5' />
           <meta name='theme-color' content='#ffffff' />
-          <Typekit kitId='ust7dkr' />
+          <link rel='stylesheet' href='https://use.typekit.net/ust7dkr.css' />
           {styleTags}
         </Head>
         <body>
