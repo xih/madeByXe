@@ -1,9 +1,12 @@
 import styled from 'styled-components'
-import MasonryInfiniteScroller from 'react-masonry-infinite'
+// import MasonryInfiniteScroller from 'react-masonry-infinite'
+
+import Masonry from 'react-masonry-component'
 
 const Img = styled.img`
+  margin: 0.5em;
   @media (max-width: 2000px) {
-    width: 26em;
+    width: 25em;
   }
   @media (max-width: 1200px) {
     width: 20em;
@@ -21,11 +24,11 @@ const EuropeContainer = styled.div`
   padding-bottom: 5em;
 `
 
-const MasonryContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
+// const MasonryContainer = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// `
 
 const IntroContainer = styled.div`
   display: flex;
@@ -48,10 +51,24 @@ const H1 = styled.h1`
   margin-bottom: 0.8em;
 `
 
+var masonryOptions = {
+  transitionDuration: 0
+}
+
 const Europe = (props) => {
-  const sizes = [{ columns: 1, gutter: 20 },
-                 { mq: '768px', columns: 2, gutter: 20 },
-                 { mq: '1024px', columns: 3, gutter: 20 }]
+  // const sizes = [{ columns: 1, gutter: 20 },
+  //                { mq: '768px', columns: 2, gutter: 20 },
+  //                { mq: '1024px', columns: 3, gutter: 20 }]
+
+  var childElements = props.images.map(function (src) {
+    return (
+      // <li className="image-element-class container">
+      // <div className='container'>
+      <Img src={src} />
+      // </div>
+      // </li>
+    )
+  })
 
   return (
     <EuropeContainer>
@@ -62,7 +79,19 @@ const Europe = (props) => {
         <img src={'/static/vatican.jpg'} />
       </IntroContainer>
 
-      <MasonryContainer className='hidden-md-up'>
+      <div className='container-fluid'>
+        <Masonry
+          className={'row justify-content-center'} // default ''
+          // elementType={'div'} // default 'div'
+          options={masonryOptions} // default {}
+          disableImagesLoaded={false} // default false
+          updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
+        >
+          {childElements}
+        </Masonry>
+      </div>
+
+      {/* <MasonryContainer className='hidden-md-up'>
         <MasonryInfiniteScroller sizes={sizes}>
           {props.images.map((src, index) =>
             <div key={index} className='container-fluid'>
@@ -80,7 +109,8 @@ const Europe = (props) => {
             </div>
           )}
         </MasonryInfiniteScroller>
-      </MasonryContainer>
+      </MasonryContainer> */}
+
     </EuropeContainer>
   )
 }
