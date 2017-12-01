@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 // import MasonryInfiniteScroller from 'react-masonry-infinite'
-
-import Masonry from 'react-masonry-component'
+// import Masonry from 'react-masonry-component'
 
 const Img = styled.img`
   margin: 0.5em;
@@ -51,9 +50,16 @@ const H1 = styled.h1`
   margin-bottom: 0.8em;
 `
 
-var masonryOptions = {
-  transitionDuration: 0
-}
+// var masonryOptions = {
+//   transitionDuration: 0
+// }
+
+const FlexContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+`
 
 const Europe = (props) => {
   // const sizes = [{ columns: 1, gutter: 20 },
@@ -79,7 +85,11 @@ const Europe = (props) => {
         <img src={'/static/vatican.jpg'} />
       </IntroContainer>
 
-      <div className='container-fluid'>
+      <FlexContainer>
+        {childElements}
+      </FlexContainer>
+
+      {/* <div className='container-fluid'>
         <Masonry
           className={'row justify-content-center'} // default ''
           // elementType={'div'} // default 'div'
@@ -89,7 +99,7 @@ const Europe = (props) => {
         >
           {childElements}
         </Masonry>
-      </div>
+      </div> */}
 
       {/* <MasonryContainer className='hidden-md-up'>
         <MasonryInfiniteScroller sizes={sizes}>
