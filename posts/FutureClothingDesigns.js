@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from 'next/link'
 
 const H1 = styled.h1`
   font-size: 6.7vw;
@@ -17,7 +18,7 @@ const Div = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 2em;
-  margin-bottom: 5em;
+  margin-bottom: 3em;
 `
 
 const P = styled.p`
@@ -29,13 +30,40 @@ const P = styled.p`
   font-size: 1.1825em;
   line-height: 1.625em;
   margin: auto;
+  margin-top: 1em;
+
+  a {
+      color: #e74c3c;
+      &:hover {
+        text-decoration: none;
+      }
+  }
 `
 
 const Img = styled.img`
   height: auto;
   margin-top: 2em;
-  @media (max-width: 1500px) {
+  margin: 0.5em;
+  @media (max-width: 2000px) {
     width: 40em;
+  }
+  @media (max-width: 1200px) {
+    width: 40em;
+  }
+  @media (max-width: 1024px) {
+    width: 40em;
+  }
+  @media (max-width: 768px) {
+    width: 24.5em;
+  }
+  @media (max-width: 414px) {
+    width: 24.5em;
+  }
+  @media (max-width: 375px) {
+    width: 22em;
+  }
+  @media (max-width: 320px) {
+    width: 19em;
   }
 `
 
@@ -49,6 +77,13 @@ const FutureClothingDesigns = (props) => {
       <H1>{props.title}</H1>
       <P>{props.intro}</P>
       {images}
+
+      <P>Silly you! You thought I was gonna give away my clothing ideas that easily? Go steal my
+        {/* <Link href={{ pathname: '/portfolioEntry/streetstyle-ios' }} as={`/portfolioEntry/streetstyle-ios`}> */}
+        <Link href={'/portfolioEntry/streetstyle-ios'}>
+          <a> app </a>
+        </Link>
+      idea instead.</P>
     </Div>
   )
 }
