@@ -37,7 +37,19 @@ const Img = styled.img`
   @media (max-width: 1500px) {
     width: 15em;
   }
-  margin: 0.5em;
+  @media (max-width: 768px) {
+    width: 24.5em;
+  }
+  @media (max-width: 414px) {
+    width: 24.5em;
+  }
+  @media (max-width: 375px) {
+    width: 22em;
+  }
+  @media (max-width: 320px) {
+    width: 19em;
+  }
+  margin: 0.8em;
 `
 
 const FlexContainer = styled.div`
@@ -47,16 +59,83 @@ const FlexContainer = styled.div`
   flex-wrap: wrap;
 `
 
+const ExploreImages = styled.img`
+  margin: 0.8em;
+  @media (max-width: 2000px) {
+    width: 13em;
+  }
+  @media (max-width: 1200px) {
+    width: 13em;
+  }
+  @media (max-width: 1024px) {
+    width: 15em;
+  }
+  @media (max-width: 768px) {
+    width: 24.5em;
+  }
+  @media (max-width: 414px) {
+    width: 24.5em;
+  }
+  @media (max-width: 375px) {
+    width: 22em;
+  }
+  @media (max-width: 320px) {
+    width: 19em;
+  }
+`
+
+const H2 = styled.h2`
+  font-family: brandon-grotesque, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  margin-top: 3.5em;
+`
+
 const StreetstyleIos = (props) => {
-  const images = props.images.map(src =>
+  const { mainPhoto } = props
+
+  const homeImages = mainPhoto.home.map(src =>
     <Img src={src} />
   )
+
+  const exploreImages = mainPhoto.explore.map(src =>
+    <ExploreImages src={src} />
+  )
+
+  const cartImages = mainPhoto.cart.map(src =>
+    <Img src={src} />
+  )
+
+  const registerImages = mainPhoto.register.map(src =>
+    <Img src={src} />
+  )
+
   return (
     <Div className='container'>
       <H1>{props.title}</H1>
       <P>{props.intro}</P>
+
+      <H2>LOADING GOLD</H2>
+      <Img src={mainPhoto.intro} />
+
+      <H2>Home</H2>
       <FlexContainer>
-        {images}
+        {homeImages}
+      </FlexContainer>
+
+      <H2>Explore</H2>
+      <FlexContainer>
+        {exploreImages}
+      </FlexContainer>
+
+      <H2>Cart</H2>
+      <FlexContainer>
+        {cartImages}
+      </FlexContainer>
+
+      <H2>Create a New Account</H2>
+      <FlexContainer>
+        {registerImages}
       </FlexContainer>
 
     </Div>

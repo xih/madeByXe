@@ -33,9 +33,11 @@ const portfolioEntryPage = (props) => {
     const images = props.entries.includes.Asset.map((el) => 'https:' + el.fields.file.url)
     const title = props.entries.items[0].fields.title
     const introduction = props.entries.items[0].fields.introduction
+    const mainPhoto = props.entries.items[0].fields.mainPhoto
+
     return (
       <Layout>
-        <StreetstyleIos title={title} images={images} intro={introduction} />
+        <StreetstyleIos title={title} images={images} intro={introduction} mainPhoto={mainPhoto} />
       </Layout>
     )
   } else if (props.url.query.portfolioEntry === 'designed-and-sewed-by-me') {
