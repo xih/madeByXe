@@ -35,8 +35,16 @@ const Img = styled.img`
   height: auto;
   margin-top: 2em;
   @media (max-width: 1500px) {
-    width: 40em;
+    width: 15em;
   }
+  margin: 0.5em;
+`
+
+const FlexContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 `
 
 const StreetstyleIos = (props) => {
@@ -47,7 +55,10 @@ const StreetstyleIos = (props) => {
     <Div className='container'>
       <H1>{props.title}</H1>
       <P>{props.intro}</P>
-      {images}
+      <FlexContainer>
+        {images}
+      </FlexContainer>
+
     </Div>
   )
 }

@@ -14,7 +14,16 @@ const Img = styled.img`
     width: 20em;
   }
   @media (max-width: 768px) {
+    width: 24.5em;
+  }
+  @media (max-width: 414px) {
+    width: 24.5em;
+  }
+  @media (max-width: 375px) {
     width: 22em;
+  }
+  @media (max-width: 320px) {
+    width: 19em;
   }
 `
 
@@ -69,7 +78,7 @@ const Europe = (props) => {
   var childElements = props.images.map(function (src) {
     return (
       // <li className="image-element-class container">
-      // <div className='container'>
+      // <div className='container-fluid'>
       <Img src={src} />
       // </div>
       // </li>
