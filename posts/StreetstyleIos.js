@@ -20,7 +20,7 @@ const H1 = styled.h1`
   margin-bottom: 0.8em;
 `
 
-const P = styled.p`
+const IntroDiv = styled.div`
   white-space: pre-wrap;
   max-width: 40em;
   font-family: futura-pt, sans-serif;
@@ -29,6 +29,13 @@ const P = styled.p`
   font-size: 1.1825em;
   line-height: 1.625em;
   margin: auto;
+
+  a {
+      color: #e74c3c;
+      &:hover {
+        text-decoration: none;
+      }
+  }
 `
 
 const Img = styled.img`
@@ -113,7 +120,9 @@ const StreetstyleIos = (props) => {
   return (
     <Div className='container'>
       <H1>{props.title}</H1>
-      <P>{props.intro}</P>
+      {/* <P>{props.intro}</P> */}
+
+      <IntroDiv dangerouslySetInnerHTML={{ __html: props.intro }} />
 
       <H2>LOADING GOLD</H2>
       <Img src={mainPhoto.intro} />
