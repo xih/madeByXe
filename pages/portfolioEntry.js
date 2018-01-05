@@ -74,6 +74,19 @@ const portfolioEntryPage = (props) => {
         <SketchesDesignerChairs title={title} images={images} intro={introduction} />
       </Layout>
     )
+  } else if (props.url.query.portfolioEntry === 'piano') {
+    // const images = props.entries.includes.Asset.map((el) => 'https:' + el.fields.file.url) || ['']
+    const images = []
+    const title = props.entries.items[0].fields.title
+    const introduction = props.entries.items[0].fields.introduction
+    const content = props.entries.items[0].fields.content
+
+    return (
+      <Layout>
+        {/*  I use future clothing designs here because it is basically like a default layout */}
+        <QuestKebabtallrik content={content} title={title} images={images} intro={introduction} />
+      </Layout>
+    )
   }
 }
 

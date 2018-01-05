@@ -57,17 +57,24 @@ const questKebabtallrik = 'During my time that I lived in Lund, I was introduced
 'is the Swedish equivalent of Chipotle. But it\'s not standardized in terms of value and taste, meaning there are a plethora of local kebabtallrik joints ' +
 'with differing price points and taste. I wrote and photographed this guide to change that fact.'
 
+const pianoLessons = 'I started playing piano when I was 7 years old. I took private lessons for around eight years, during which time I built up my foundation. Now I learn pieces myself. My training' +
+' is in classical music where I passed Certificate of Merit Advanced (Level 10). If given the opportunity, I hope to instill in your child not just the foundations of rhythm and pitch but also the love of music'
+
 const IndexPage = ({ posts }) =>
   <Layout>
     <Div className='container'>
       Hi! I'm Xe (pronounced Z)
     </Div>
     <ParagraphDiv className='container'>
-      I’m a self-taught designer who loves clothes and interiors. Previously I studied Engineering at UC Berkeley.
+      I’m a software engineer / self-taught designer. Previously I studied Engineering at UC Berkeley.
+      Currently, I teach piano on the side. Click the card below to schedule an appointment.
     </ParagraphDiv>
     <Div className='container'>
       Portfolio
     </Div>
+    <div className='container card-deck'>
+      <Card url={'/static/yuja.jpg'} title={'Piano Lessons'} slug={'piano'} cardText={pianoLessons} />
+    </div>
     <CardsContainer className='container card-deck'>
       <Card url={'/static/streetstyle.jpg'} title={'Streetstyle Photography x iOS'} slug={'streetstyle-ios'} cardText={streetStylexIosCardText} />
       <Card url={'/static/5v2.jpg'} title={'Designed and Sewed By Me'} slug={'designed-and-sewed-by-me'} cardText={designedAndSewedCardText} />

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const QuestKebabtallrik = (props) => {
   return (
-    <div>
+    <SpacingDiv>
       <div className='container-fluid'>
         <H1> {props.title} </H1>
         <ContentImage src={props.mainPhoto} />
@@ -10,14 +10,18 @@ const QuestKebabtallrik = (props) => {
       <div className='container'>
         <Div dangerouslySetInnerHTML={{ __html: props.content }} />
       </div>
-    </div>
+    </SpacingDiv>
   )
 }
 
 const ContentImage = styled.img`
   width: 100%;
   max-width: 100%;
-  margin-bottom: 3em;
+  ${''}
+`
+
+const SpacingDiv = styled.div`
+  margin-bottom: 5em;
 `
 
 const H1 = styled.h1`
@@ -42,8 +46,15 @@ const Div = styled.div`
   line-height: 1.625em;
   margin: auto;
 
+  white-space: pre-wrap;
+
   @media (min-width: 768px) {
     width: 637px;
+  }
+
+  b {
+    font-weight: 600;
+    font-style: normal;
   }
 
   a {
