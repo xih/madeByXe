@@ -66,8 +66,7 @@ const IndexPage = ({ posts }) =>
       Hi! I'm Xe (pronounced Z)
     </Div>
     <ParagraphDiv className='container'>
-      I’m a software engineer / self-taught designer. Previously I studied Engineering at UC Berkeley.
-      Currently, I teach piano on the side. Click the card below to schedule an appointment.
+      I teach piano. Previously I studied Engineering at UC Berkeley. Click the card below to schedule a piano lesson.
     </ParagraphDiv>
     <Div className='container'>
       Portfolio
